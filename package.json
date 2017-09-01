@@ -1,0 +1,28 @@
+{
+  "name": "kort",
+  "version": "0.0.1",
+  "description": "Image processing service",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "image",
+    "processing",
+    "service"
+  ],
+  "author": "Johannes Millegård",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "sharp": "^0.18.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.5.0",
+    "eslint-config-nodejs": "^2.0.0",
+    "mocha": "^3.5.0",
+    "pm2": "^2.6.1"
+  }
+}
