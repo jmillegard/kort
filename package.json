@@ -4,7 +4,8 @@
   "description": "Image processing service",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha test/*/*.js",
+    "start": "pm2 start server.js"
   },
   "keywords": [
     "image",
@@ -16,6 +17,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
+    "method-override": "^2.3.9",
     "sharp": "^0.18.2"
   },
   "devDependencies": {
