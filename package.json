@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test/*/*.js",
-    "start": "pm2 start server.js"
+    "start": "pm2-dev start server.js"
   },
   "keywords": [
     "image",
