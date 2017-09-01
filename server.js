@@ -12,8 +12,8 @@ const app = express()
 
 // all environments
 app.set('port', 4321)
-app.use(bodyParser.urlencoded({ extended: true, limit: '20mb' }))
-app.use(bodyParser.json({ type: 'application/vnd.api+json', limit: '20mb' }))
+app.use(bodyParser.urlencoded({ extended: true, limit: '40mb' }))
+app.use(bodyParser.json({ type: 'application/vnd.api+json', limit: '40mb' }))
 app.use(methodOverride('X-HTTP-Method-Override'))
 
 const server = http.createServer(app).listen(app.get('port'), () => {
@@ -39,9 +39,8 @@ app.use((err, req, res) => {
   res.status(req.status || 404).json({errors: req.errors})
 })
 
-// error handlers
 if (app.get('env') === 'development') {
   app.use((err, req, res, next) => {
     res.status(req.status || 404).json({errors: req.errors})
-  });
+  })
 }
